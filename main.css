@@ -103,26 +103,32 @@ img {
 .flex {
 	display: flex;
 }
+@media only screen and (min-width: 1100px) {
+	.hero__link a:hover {
+		color:#FA5B18;
+		transition: background-color 0.3s ease;
+	}
+}
+@media only screen and (max-width: 1000px) {
+	.hero__container {
+		padding: 5em 1em;
+	}
+	.hero__link {
+		flex-direction: column;
+		gap: 60px;
+		height: fit-content;
+	}
+	.hero__link div {
+		padding: 10px 30px;
+	}
+	.hero__link div:nth-child(1) {
+		margin-top: 0;
+	}
+	.hero__link div:nth-child(3) {
+		margin-top: 0;
+	}
 
-
-
-.typewriter {
-	overflow: hidden; /* Ensures the text is not revealed until the animation */
-	border-right: .15em solid orange; /* The typewriter cursor */
-	white-space: nowrap; /* Keeps the content on a single line */
-	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-	animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-	from { width: 0 }
-	to { width: 100% }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-	from, to { border-color: transparent }
-	50% { border-color: orange; }
-  }
-  
+	br {
+		display: none;
+	}
+}
