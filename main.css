@@ -46,6 +46,7 @@ q:before, q:after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+	font-family: "Open Sans", sans-serif;
 }
 table {
 	border-collapse: collapse;
@@ -66,6 +67,21 @@ table {
 }
 .hero__link {
 	justify-content: space-between;
+	height: 30vh;
+}
+.hero__link a {
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 28px;
+	text-transform: uppercase;
+	color: #ffff;
+	line-height: 105%;
+}
+.hero__link div:nth-child(1) {
+	padding-top:7vh;
+}
+.hero__link div:nth-child(3) {
+	padding-top:7vh;
 }
 .hero__container {
 	flex-direction: column;
