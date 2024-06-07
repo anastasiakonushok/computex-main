@@ -77,11 +77,17 @@ table {
 	color: #ffff;
 	line-height: 105%;
 }
+.hero__link div {
+	padding-left: 30px;
+	border-left: 2px solid #fff;
+}
 .hero__link div:nth-child(1) {
-	padding-top:7vh;
+	margin-top:7vh;
+	/* padding-left: 30px;
+	border-left: 2px solid #fff; */
 }
 .hero__link div:nth-child(3) {
-	padding-top:7vh;
+	margin-top:7vh;
 }
 .hero__container {
 	flex-direction: column;
@@ -97,3 +103,26 @@ img {
 .flex {
 	display: flex;
 }
+
+
+
+.typewriter {
+	overflow: hidden; /* Ensures the text is not revealed until the animation */
+	border-right: .15em solid orange; /* The typewriter cursor */
+	white-space: nowrap; /* Keeps the content on a single line */
+	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+	animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: orange; }
+  }
+  
