@@ -61,6 +61,8 @@ table {
 .hero {
     background: url(./img/bg-main.jpg) no-repeat center center;
     background-size: cover;
+    min-height: 100vh;
+    max-height: -webkit-fill-available;
     height: 100vh;
 	overflow: hidden;
     /* padding: 30px 30px 0px 30px; */
