@@ -61,9 +61,9 @@ table {
 .hero {
     background: url(./img/bg-main.jpg) no-repeat center center;
     background-size: cover;
-    min-height: 100vh;
+    min-height: calc(var(--vh, 1vh) * 100);
     max-height: -webkit-fill-available;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 	overflow: hidden;
     /* padding: 30px 30px 0px 30px; */
 }
@@ -114,6 +114,8 @@ img {
 @media only screen and (max-width: 1000px) {
 	.hero__container {
 		padding: 5em 1em;
+		justify-content: flex-start;
+		gap: 150px;
 	}
 	.hero__link {
 		flex-direction: column;
