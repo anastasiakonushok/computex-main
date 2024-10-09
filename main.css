@@ -68,51 +68,63 @@ table {
     flex-direction: column;
     position: relative;
     overflow: hidden;
+    padding: 20px; /* небольшой отступ для маленьких экранов */
 }
 
 .hero img {
     max-width: 100%;
-    max-height: 100vh; /* максимальная высота равна высоте экрана */
+    max-height: 40vh; /* ограничение по высоте, чтобы изображение не перекрывало ссылки */
     object-fit: contain; /* изображение будет адаптироваться */
     margin-bottom: 20px; /* отступ снизу для создания пространства для ссылок */
 }
 
 .hero__container {
     flex-direction: column;
-    gap: 60px;
-    justify-content: center;
-    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .hero__link {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    height: auto;
-    margin-top: 20px; /* немного отступа сверху */
+    gap: 20px; /* отступ между ссылками */
 }
 
-.hero__link div {
-    margin-bottom: 20px; /* отступ между ссылками */
+.hero__link a {
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 22px; /* уменьшаем шрифт для лучшей адаптивности */
+    text-transform: uppercase;
+    color: #fff;
+    line-height: 105%;
+    text-align: center;
 }
 
 @media only screen and (max-width: 1000px) {
+    .hero img {
+        max-height: 30vh; /* уменьшаем изображение для мобильных устройств */
+    }
+
+    .hero__link a {
+        font-size: 18px; /* уменьшаем размер текста для мобильных экранов */
+    }
+
     .hero__container {
-        padding: 5em 1em;
-        justify-content: flex-start;
-        gap: 60px;
-    }
-    .hero__link {
-        flex-direction: column;
-        gap: 20px;
-        height: fit-content;
-    }
-    .hero__link div {
-        padding: 10px 30px;
-    }
-    br {
-        display: none;
+        padding: 2em 1em;
     }
 }
+
+@media only screen and (max-width: 600px) {
+    .hero img {
+        max-height: 20vh; /* еще меньше на маленьких экранах */
+    }
+
+    .hero__link a {
+        font-size: 16px; /* уменьшаем размер текста на маленьких экранах */
+    }
+}
+
 
