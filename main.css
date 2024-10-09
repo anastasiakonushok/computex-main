@@ -59,80 +59,60 @@ table {
     width: 100%;
 }
 .hero {
-    background: url(./img/bg-main.jpg) no-repeat center center;
+    background: #1c1c1c;
     background-size: cover;
-    min-height: calc(var(--vh, 1vh) * 100);
-    max-height: -webkit-fill-available;
-    height: calc(var(--vh, 1vh) * 100);
-	overflow: hidden;
-    /* padding: 30px 30px 0px 30px; */
+    min-height: 100vh; /* всегда 100vh */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
 }
-.hero__link {
-	justify-content: space-between;
-	height: 30vh;
-}
-.hero__link a {
-	text-decoration: none;
-	font-weight: 700;
-	font-size: 28px;
-	text-transform: uppercase;
-	color: #ffff;
-	line-height: 105%;
-}
-.hero__link div {
-	padding-left: 30px;
-	border-left: 2px solid #fff;
-}
-.hero__link div:nth-child(1) {
-	margin-top:7vh;
-	/* padding-left: 30px;
-	border-left: 2px solid #fff; */
-}
-.hero__link div:nth-child(3) {
-	margin-top:7vh;
-}
-.hero__container {
-	flex-direction: column;
-	gap: 60px;
-	justify-content: space-between;
-	height: 100%;
-}
-img {
-    width: 100%;
-    margin: 0 auto;
-    display: block;
-}
-.flex {
-	display: flex;
-}
-@media only screen and (min-width: 1100px) {
-	.hero__link a:hover {
-		color:#FA5B18;
-		transition: background-color 0.3s ease;
-	}
-}
-@media only screen and (max-width: 1000px) {
-	.hero__container {
-		padding: 5em 1em;
-		justify-content: flex-start;
-		gap: 150px;
-	}
-	.hero__link {
-		flex-direction: column;
-		gap: 60px;
-		height: fit-content;
-	}
-	.hero__link div {
-		padding: 10px 30px;
-	}
-	.hero__link div:nth-child(1) {
-		margin-top: 0;
-	}
-	.hero__link div:nth-child(3) {
-		margin-top: 0;
-	}
 
-	br {
-		display: none;
-	}
+.hero img {
+    max-width: 100%;
+    max-height: 100vh; /* максимальная высота равна высоте экрана */
+    object-fit: contain; /* изображение будет адаптироваться */
+    margin-bottom: 20px; /* отступ снизу для создания пространства для ссылок */
 }
+
+.hero__container {
+    flex-direction: column;
+    gap: 60px;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    margin-top: 20px; /* немного отступа сверху */
+}
+
+.hero__link div {
+    margin-bottom: 20px; /* отступ между ссылками */
+}
+
+@media only screen and (max-width: 1000px) {
+    .hero__container {
+        padding: 5em 1em;
+        justify-content: flex-start;
+        gap: 60px;
+    }
+    .hero__link {
+        flex-direction: column;
+        gap: 20px;
+        height: fit-content;
+    }
+    .hero__link div {
+        padding: 10px 30px;
+    }
+    br {
+        display: none;
+    }
+}
+
